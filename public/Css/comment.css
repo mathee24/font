@@ -1,0 +1,303 @@
+*{
+    margin:0;
+}
+body{
+    background-image: url("../pic/bgregister.jpg");
+    background-size: cover;
+}
+.book-details{
+    text-align: center;
+    justify-content: center;
+}
+.title{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.type{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.book-details p{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+img{
+   width: 550px;
+   height: 800px;
+   margin-left: 36%;
+   border-radius: 15px;
+
+}
+textarea {
+    width: 604px;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-left: 34%;
+    text-align: left;
+    direction: ltr;
+    margin-top:2%;
+    border: none;
+    font-size: 26px;
+    font-family: cursive;
+    
+  }
+.comments-list {
+    
+    margin-left: 20em;
+    font-size: 2em;
+    
+}
+.myBox {
+    border: 2px solid rgba(255, 255, 255, 0.486);
+    padding: 5px;
+    width: 650px;
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-left:33%;
+    margin-bottom: 10em;
+    margin-top: 2em;
+    background-color: #a1f1f1c7;
+    border-radius: 10px;
+    }
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+        background: rgb(1, 87, 16);  
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+        background: #8eff62;  
+        }
+.usernamef{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-family:cursive;
+    color: #ffffff;
+    
+}
+.commentf{
+    margin-left: 30px;
+    font-size: 18px;
+    font-family:cursive;
+}
+.btn{
+margin-top: 30px;
+  width: 32.75%;
+  background-color: #15a508;
+  color: rgb(255, 255, 255);
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 1000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s ease; 
+  font-family:cursive;
+  word-spacing: 5px;
+  margin-left: 34%;
+  border: 2px solid gray;
+}
+.btn:hover{
+    background-color: #f07354;
+}
+.nav-container ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background-color: #51703c;
+    color: #fff;
+    padding: 10px;
+    opacity: 85%;
+    
+}
+
+.nav-container ul li {
+    margin-right: 25px;
+    
+}
+
+.nav-container ul li:last-child {
+    margin-right: 0;
+}
+.nav-container ul li a:hover {
+    color: #FFE4E1;
+    
+}
+.nav-container ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.register {
+    margin-left: 0.1em;
+
+}
+
+.register a {
+    text-decoration: none;
+    padding: 12px;
+    background-color: #FFDEAD;
+    border-radius: 6px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer; 
+    transition: 0.5s;
+    font-weight: bold;
+
+}
+
+.register a:hover {
+    background-color: rgb(243, 182, 141);
+    color: #000000;
+    
+    
+    
+}
+.login {
+    margin-left: 81em;
+
+}
+
+.login a {
+    text-decoration: none;
+    padding: 12px;
+    background-color: #FFDEAD;
+    border-radius: 6px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer; 
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.login a:hover {
+    background-color: rgb(243, 182, 141);
+    color: #000000;
+}
+.logo{
+    margin-left: 1em;
+    margin-right: 0.5em;
+    width: 50px;
+    height: 50px;
+
+}
+
+footer {
+
+    color: #c0c0c0; 
+    padding: 20px; 
+    position: fixed;
+    bottom: 0; 
+    width: 100%; 
+    margin-right: 20em;
+    
+}
+.btn-logout {
+    background-color: #c62828;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.btn-logout:hover {
+    background-color: #6e0808;
+}
+.return{
+    font-size: 40px;
+    max-width: 70px;
+    margin-top: 5em;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  section {
+    height: 115vh;
+    position: relative;
+  }
+ 
+  a#scroll-btn {
+    position: absolute;
+    height: 5em;
+    width: 3.25em;
+    border: 0.5em solid #706e6e;
+    margin-left: 920px;
+    left: 0;
+    right: 0px;
+    bottom: 4.0em;
+    border-radius: 3em;
+    opacity: 65%;
+  }
+  a#scroll-btn:before {
+    position: absolute;
+    content: "";
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1.2em;
+    height: 1.2em;
+    width: 1.2em;
+    background-color: #706e6e;
+    border-radius: 50%;
+    animation: move-down 2s infinite;
+
+  }
+  @keyframes move-down {
+    80% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(6em);
+      opacity: 0;
+    }
+  }
+  
+  #section-2 {
+    
+    background-size: 100%;
+    color: #ffffff;  
+    justify-content: center;
+    margin-top: 10px;
+
+  
+  }
+  #section-2 h3{
+    font-size: 38px;
+    margin-top: 4.5em;
+    margin-left: 22.80em;
+    
+  }
+  @media screen and (max-width: 500px) {
+    a#scroll-btn {
+      font-size: 12px;
+    }
+}

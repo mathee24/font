@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-container">
+        <ul>
+            <li><img class="logo"src="../pic/logo.png" width="50px" height="50px ></li>
+            <li><img src="#" alt=""></li>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/book">Books</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/news">News</a></li>
+        </ul>
+
+        <center><h3 class="title">COZYBOOKS REVIEWS.</h3></center>
+    </div>
+
+<div class="background">
+ <center> 
+    <form action="/update/<%= userid %>" method="post">
+        <h3 class="currentuser">Your Current Username: <br><%= username %></h3>
+        <label for="">Your New username:</label>
+        <br>
+        <input type="text" name="updatename" id="updatename">
+        <br>
+        <button class="confirm" type="submit">Confirm</button>
+        <br>
+        <a class="return" href="/profile/<%= userid %>"><p><</p></a>
+    </form>
+ </center>
+</div>
+</body>
+<style>
+*{
+    margin:0 ;
+}
+body{
+    background-image: url("../pic/updatebg.jpg");
+}
+    .nav-container ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background-color: #51703c;
+    color: #fff;
+    padding: 10px;
+    opacity: 85%;
+    
+}
+
+.nav-container ul li {
+    margin-right: 25px;
+    
+}
+
+.nav-container ul li:last-child {
+    margin-right: 0;
+}
+.nav-container ul li a:hover {
+    color: #FFE4E1;
+    
+}
+.nav-container ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.register {
+    margin-left: 0.1em;
+
+}
+
+.register a {
+    text-decoration: none;
+    padding: 12px;
+    background-color: #FFDEAD;
+    border-radius: 6px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer; 
+    transition: 0.5s;
+    font-weight: bold;
+
+}
+
+.register a:hover {
+    background-color: rgb(243, 182, 141);
+    color: #000000;
+    
+    
+    
+}
+.login {
+    margin-left: 81em;
+
+}
+
+.login a {
+    text-decoration: none;
+    padding: 12px;
+    background-color: #FFDEAD;
+    border-radius: 6px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer; 
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.login a:hover {
+    background-color: rgb(243, 182, 141);
+    color: #000000;
+}
+.logo{
+    margin-left: 1em;
+    margin-right: 0.5em;
+
+}
+.title{
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: 1000;
+    text-shadow: 2px 2px 4px rgba(65, 64, 64, 0.5);
+    opacity: 80%;
+    word-spacing: 2px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.confirm{
+    padding: 12px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    background-color: #67ec55;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: cursive;
+    margin-top: 5%;
+    color: rgb(59, 59, 59);
+    text-transform: uppercase;
+    transition: 0.4s ease-in;
+    
+    
+}
+.confirm:hover{
+    background-color: #ff906e;
+   
+    
+    
+}
+.currentuser{
+    font-family: cursive;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+
+}
+label{
+    font-size: 40px;
+    font-family: cursive;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+input{
+    width: 400px;
+    height: 50px;
+    margin-top: 40px;
+    font-size: 30px;
+    font-family: cursive;
+    border: none;
+    border-radius: 6px;
+    color: #000000;
+    background-color: #3577f1be;
+    transition: 0.5s ease-in;
+}
+input:hover{
+    background-color: #a6d5f5da;
+
+}
+.background{
+  width: 430px;
+  height: 520px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+}
+
+
+form{
+  height: 430px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.11);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 50px 35px;
+  font-weight: bold;
+  color: #000;
+}
+form *{
+  font-family:cursive;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 35px;
+
+}
+.return {
+  background-color: #3eeeeed0; /* Green */
+  border: none;
+  color: rgb(90, 90, 90);
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 20%;
+  margin: 25px 2px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-family: cursive;
+  transition: 0.5s ease-in;
+}
+.return:hover{
+    background-color:darkblue;
+}
+</style>
+</html>

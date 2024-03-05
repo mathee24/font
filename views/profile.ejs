@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-container">
+        <ul>
+            <li><img class="logo"src="../pic/logo.png" width="50px" height="50px ></li>
+            <li><img src="#" alt=""></li>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/book">Books</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/news">News</a></li>
+            <li class="profile-btn"><a href="/profile/<%= userid %>"><%= username %></a> </li>
+            <form action="/logout" method="POST">
+                <button class="btn-logout"type="submit">Logout</button>
+            </form>
+        </ul>
+
+        <center><h3 class="title">COZYBOOKS REVIEWS.</h3></center>
+    </div>
+<div class="textbox">
+    <h1>User Profile</h1>
+    <h2>Username: <%= username %></h2>
+    <h2>ID: <%= userid %></h2>
+    <h2>Email: <%= userdata.email %> </h2>
+
+<div class="text-container"><p> Created: <%= userdata.createdAt %></p>
+    <p>Update: <%= userdata.updatedAt %></p>
+    <p>Status: 💚</p></div>
+    <br><br><br><br>
+    <a class="update"href="/update/<%= userid %>">Change Username</a>  
+    <form action="/delete/<%= userid %>">
+        <button  class="delacc"type="submit">Delete Account</button>
+    </form>
+    <a class="return" href="/book"><p><</p></a>
+</body>
+</div>
+<style>
+    *{
+        margin:0;
+    }
+    body{
+        background-image: url("../pic/bgprofile.jpg");
+        background-size: cover;
+    }
+    .text-container {
+        width: 200px; /* กำหนดความกว้างของกล่องข้อความ */
+        overflow: hidden; /* จัดการข้อความที่เกินขอบเขตโดยการซ่อน */
+        white-space: nowrap; /* ไม่ให้ข้อความขึ้นบรรทัดใหม่ */
+        
+    }
+    .textbox {
+        background-color: #96f896e5; /* สีพื้นหลัง */
+        border-radius: 10px; /* ความโค้งของมุม */
+        padding: 20px; /* การเว้นระยะของข้อความภายในกล่อง */
+        box-shadow: 0 4px 8px rgba(4, 4, 4, 4); /* เงา */
+        width: 400px; /* ความกว้างของกล่อง */
+        height: 600px;
+        margin-top: 30px;
+        margin-left: 38.5%;
+        border: none;
+    }
+
+    /* สไตล์ข้อความภายในกล่อง */
+    .textbox h2 {
+        color: #333; /* สีข้อความ */
+        font-family: cursive;
+        text-align: left; /* การจัดตำแหน่งข้อความ */
+        margin-bottom: 10px; /* ระยะห่างด้านล่างของข้อความ */
+    }
+
+    .textbox h1 {
+        color: #000000; /* สีข้อความ */
+        font-family: cursive;
+        text-align: center; /* การจัดตำแหน่งข้อความ */
+        line-height: 1.6; 
+    }
+    .textbox p{
+        font-size: 20px;
+        font-family: cursive;
+        margin-bottom: 15px;
+    }
+    .update {
+    text-decoration: none;
+    padding: 12px;
+    background-color: #48e3f7;
+    border-radius: 6px;
+    font-family: cursive;
+    cursor: pointer; 
+    transition: 0.5s;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    border: none;
+    color: #000000;
+    }
+    .update:hover{
+        background-color: #056a77;
+    }
+    .delacc{
+    text-decoration: none;
+    padding: 12px;
+    background-color: #f7643f;
+    border-radius: 6px;
+    font-family: cursive;
+    cursor: pointer; 
+    transition: 0.5s;
+    font-weight: 1000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    font-size: 18px;
+    }
+    .delacc:hover{
+        background-color: #6e0808;
+    }
+.nav-container ul {
+display: flex;
+align-items: center;
+list-style-type: none;
+background-color: #51703c;
+color: #fff;
+padding: 10px;
+opacity: 85%;
+    
+}
+
+.nav-container ul li {
+    margin-right: 25px;
+    
+}
+
+.nav-container ul li:last-child {
+    margin-right: 0;
+}
+.nav-container ul li a:hover {
+    color: #FFE4E1;
+    
+}
+.nav-container ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.btn-logout {
+    background-color: #c62828;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    text-decoration: none;
+    color: #000000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-logout:hover {
+    background-color: #6e0808;
+}
+.profile-btn{
+    background-color: #65ec3b;
+    color: #fff;
+    border: none;
+    padding: 9px 22px;
+    border-radius: 5px;
+    margin-left: 81em;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.profile-btn:hover{
+    background-color: #1f7a03;
+}
+.title{
+    color: black;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: 1000;
+    text-shadow: 2px 2px 4px rgba(65, 64, 64, 0.5);
+    opacity: 70%;
+    word-spacing: 2px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.return {
+  background-color: #096611; /* Green */
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 20%;
+  margin: 25px 2px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-family: cursive;
+}
+.return p{
+    margin-top: 5px;
+   
+    font-size: 25px;
+}
+.return:hover{
+    background-color: #ff7070;
+}
+</style>
+</html>
